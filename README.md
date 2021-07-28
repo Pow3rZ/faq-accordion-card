@@ -28,14 +28,14 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Pow3rZ/faq-accordion-card]
-- Live Site URL: [Add live site URL here]
+- Live Site URL: [https://pow3rz.github.io/faq-accordion-card/]
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
 - CSS Grid
 - Mobile-first workflow
 
