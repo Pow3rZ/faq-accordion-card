@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  color: #1d1e35;
+  background: linear-gradient(178deg, #af67e9, #6565e7);
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accordion-container {
+  background-color: #fefefe;
+  margin: 10rem 1.5rem 0;
+  border-radius: 1.8rem;
+  overflow: visible;
+}
+
+.accordion-image-container {
+  min-height: 10em;
+  position: relative;
+}
+
+.image-mobile {
+  position: absolute;
+  max-width: 100%;
+  right: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  bottom: 2.75em;
+}
+
+.image-mobile-shadow {
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(55%);
+          transform: translate(55%);
+  bottom: 1.7em;
+}
+
+.box-image {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.accordion {
+  list-style: none;
+  padding: 0 2em 4em;
+}
+
+.accordion li {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+input[name='accordion-item'] {
+  display: none;
+}
+
+input:checked + label {
+  font-weight: bold;
+}
+
+input:checked + label::after {
+  -webkit-transform: rotateX(0.5turn);
+          transform: rotateX(0.5turn);
+}
+
+input:checked ~ .accordion-content {
+  padding: 0 2em 1em 0;
+  max-height: 5em;
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+label {
+  display: block;
+  padding: 1.5em 0;
+  font-size: 1.175rem;
+  position: relative;
+  color: #4a4b5e;
+  cursor: pointer;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+label:hover {
+  color: #f47c57;
+}
+
+label::after {
+  content: url("./images/icon-arrow-down.svg");
+  position: absolute;
+  right: 1em;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.accordion-content {
+  color: #787887;
+  padding-right: 2em;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  line-height: 1.4rem;
+  max-width: 45ch;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.attribution a {
+  color: #5f3ea3;
+}
+
+@media screen and (min-width: 850px) {
+  .accordion-container {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    text-align: left;
+  }
+  .accordion-image-container {
+    background-image: url("./images/bg-pattern-desktop.svg"), url("./images/illustration-woman-online-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 150%, 90%;
+    background-position: right 8em  top 70% ,right 8em top 50%;
+  }
+  .image-mobile, .image-mobile-shadow {
+    display: none;
+  }
+  .box-image {
+    display: block;
+    position: absolute;
+    width: 10em;
+    top: 44%;
+    left: -5em;
+  }
+  .accordion {
+    padding-top: 2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
